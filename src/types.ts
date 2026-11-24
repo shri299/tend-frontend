@@ -1,5 +1,10 @@
 export type ItemType='BRAIN_DUMP'|'GOAL'|'TASK'|'HABIT';
 export interface Category{id:string;name:string;color:string;icon:string}
-export interface LifeItem{id:string;type:ItemType;title:string;description?:string;status:string;priority?:string;energy?:string;scheduledDate?:string;dueDate?:string;minimumAction?:string;recurrence?:string;processed:boolean;createdAt:string}
+export interface LifeItem{id:string;type:ItemType;title:string;description?:string;status:string;priority?:string;energy?:string;scheduledDate?:string;dueDate?:string;minimumAction?:string;recurrence?:string;processed:boolean;createdAt:string;categoryId?:string;habitType?:string;unit?:string;idealTarget?:number;minimumTarget?:number;selectedWeekdays?:number[];targetPerWeek?:number;progressModel?:string;targetValue?:number;progressValue?:number}
 export interface Checkin{id:string;mood?:number;energy:string;stress?:number;note?:string;recordedAt:string}
 export interface Dashboard{today:LifeItem[];latestCheckin?:Checkin;counts:Record<string,number>;suggestion:string}
+export type HabitState='COMPLETED'|'PARTIAL'|'SKIPPED'|'MISSED';
+export interface HabitLog{id:string;habitId:string;completionDate:string;state:HabitState;actualValue?:number;note?:string}
+export interface HabitMetrics{successfulDays:number;partialDays:number;recordedDays:number;scheduledDays:number;completionRate:number;currentStreak:number;longestStreak:number}
+export interface HabitCalendarData{month:string;habits:LifeItem[];logs:HabitLog[];analytics:Record<string,HabitMetrics>}
+export interface FocusSession{id:string;taskId:string;taskTitle:string;categoryId?:string;plannedMinutes:number;actualSeconds:number;status:'ACTIVE'|'PAUSED'|'FINISHED';outcome?:string;reflection?:string;startedAt:string;updatedAt:string}
