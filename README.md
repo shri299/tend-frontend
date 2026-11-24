@@ -16,7 +16,7 @@ A responsive React + TypeScript PWA for **Tend — A little care, every day.** I
 
 ## Run locally
 
-Start the backend first, then:
+Requirements: Node.js 20 or newer. Start the backend first, then:
 
 ```bash
 cp .env.example .env
