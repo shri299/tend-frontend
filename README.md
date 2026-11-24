@@ -12,6 +12,8 @@ A responsive React + TypeScript PWA for **Tend — A little care, every day.** I
 - Custom life-space creation and archival
 - Weekly priorities and optional reflection
 - Mood trend chart that distinguishes missing data from zero
+- Bullet-journal monthly habit calendar with optimistic status updates
+- Persistent focus timer, task postponement reflection, and goal milestone progress
 - Responsive sidebar/bottom navigation and installable PWA manifest
 
 ## Run locally
